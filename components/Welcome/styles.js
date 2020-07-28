@@ -33,7 +33,8 @@ export const SceneGridContainer = styled.section`
   height: 100vh;
 
   @media ${breakpoints.largeDevice} {
-    grid-template-columns: 30% 1fr;
+    grid-template-columns: 55% 1fr;
+    padding: 50px;
   }
 `;
 
@@ -50,5 +51,14 @@ export const Logo = styled.div`
   max-width: 300px;
   & svg {
     width: 100%;
+  }
+`;
+
+export const Screen = styled.figure`
+  width: 100%;
+
+  img {
+    width: 100%;
+    object-fit: contain;
   }
 `;

@@ -8,6 +8,7 @@ import {
   SceneTitle,
   SceneGridContainer,
   TimelineWrapper,
+  Screen,
 } from './styles';
 
 export default function Welcome() {
@@ -23,7 +24,14 @@ export default function Welcome() {
       </SceneContainer>
 
       <SceneGridContainer>
-        <Logo>Hola</Logo>
+        <Screen>
+          <img src="/images/screen_front.png" alt="Vista Front-End" />
+        </Screen>
+      </SceneGridContainer>
+      <SceneGridContainer>
+        <Screen>
+          <img src="/images/laptop_back.png" alt="Vista Back-End" />
+        </Screen>
       </SceneGridContainer>
     </Wrapper>
   );
