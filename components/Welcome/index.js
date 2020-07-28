@@ -20,7 +20,7 @@ import {
 export default function Welcome() {
   return (
     <Controller>
-      <Scene triggerHook="onLeave" duration={3000} pin indicators>
+      <Scene triggerHook="onLeave" duration={3000} pin>
         {progress => (
           <Wrapper>
             <TimelineWrapper>
