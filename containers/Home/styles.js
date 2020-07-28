@@ -7,8 +7,8 @@ const { readColor, calculateRem } = Utils;
 export const Wrapper = styled.div`
   width: 100vw;
   min-height: 100vh;
-  background-color: ${readColor(colors.blue)};
-  color: ${readColor(colors.lightCyan)};
+  background-color: ${readColor(colors.gray)};
+  color: ${readColor(colors.blue)};
   max-width: 100%;
 
   @media ${breakpoints.iPadPort} {

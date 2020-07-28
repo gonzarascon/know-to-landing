@@ -50,7 +50,7 @@ export default function MyApp({ Component, pageProps }) {
         />
         <link rel="stylesheet" href="./reset.css" />
 
-        <title>Gonzalo Rascón — Web Developer</title>
+        <title>KnowTo — Framework para cursos y capacitaciones</title>
       </Head>
       <GlobalStyle />
       <Component {...pageProps} />

@@ -32,17 +32,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          {/* <!-- Google Tag Manager --> */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W8BWQD5');`,
-            }}
-          />
-          {/* <!-- End Google Tag Manager --> */}
           <meta name="format-detection" content="telephone=no" />
           <meta httpEquiv="x-rim-auto-match" content="none" />
           <meta
@@ -80,14 +69,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           />
           <meta name="theme-color" content="#ffffff"></meta>
           <meta name="author" content="https://www.gonzarascon.com" />
-          <meta name="title" content="Gonzalo Rascón — Web Development" />
+          <meta
+            name="title"
+            content="KnowTo — Framework para cursos y capacitaciones"
+          />
           <meta
             name="description"
-            content="Gonzalo Rascon is a Web Developer based in Buenos Aires, Argentina."
+            content="KnowTo es un framework moderno para crear cursos y capacitaciones a medida."
           />
           <meta
             name="keywords"
-            content="developer, web development, react, html, css, javascript, js"
+            content="elearning, cursos, capacitaciones, framework"
           />
           <meta name="robots" content="index, follow" />
           <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -95,17 +87,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
           <meta
             property="og:title"
-            content="Gonzalo Rascón — Web Development"
+            content="KnowTo — Framework para cursos y capacitaciones"
           />
           <meta
             property="og:site_name"
-            content="Gonzalo Rascón — Web Development"
+            content="KnowTo — Framework para cursos y capacitaciones"
           />
           <meta property="og:url" content="https://gonzarascon.com" />
           <meta property="og:type" content="website" />
           <meta
             property="og:description"
-            content="Gonzalo Rascon is a web developer based in Buenos Aires, Argentina"
+            content="KnowTo es un framework moderno para crear cursos y capacitaciones a medida."
           />
           <meta
             property="og:image"
@@ -129,15 +121,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <link rel="canonical" href="https://www.gonzarascon.com" />
         </Head>
         <body>
-          {/* <!-- Google Tag Manager (noscript) --> */}
-          <noscript>
-            <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-W8BWQD5"
-              height="0"
-              width="0"
-              style={{ display: 'none', visibility: 'hidden' }}></iframe>
-          </noscript>
-          {/* <!-- End Google Tag Manager (noscript) --> */}
           <Main />
           <NextScript />
         </body>

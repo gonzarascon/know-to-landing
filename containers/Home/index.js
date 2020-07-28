@@ -8,18 +8,7 @@ import {
   setWaitingInput,
 } from 'components/FormSubmissionContext';
 
-import {
-  Wrapper,
-  GridContainer,
-  BottomSection,
-  Features,
-  SocialLink,
-  LinkContainer,
-  Main,
-  ThankYou,
-  FormSectionWrapper,
-  ErrorSave,
-} from './styles';
+import { Wrapper, ThankYou, FormSectionWrapper, ErrorSave } from './styles';
 
 function Home() {
   const { sending, sent, error, waitingInput } = useFormSubmissionState();
@@ -57,32 +46,7 @@ function Home() {
 
   return (
     <Wrapper>
-      <GridContainer>
-        <Welcome />
-        <Main>
-          <Features>
-            Full-stack developer <span className="dash">—</span> Web designer
-          </Features>
-          {renderFormSection()}
-        </Main>
-        <BottomSection>
-          <LinkContainer>
-            <SocialLink
-              href="https://github.com/gonzarascon"
-              target="_blank"
-              rel="noopener noreferrer">
-              Check me on Github <SVG src="./icons/github.svg" />
-            </SocialLink>
-            <span></span>
-            <SocialLink
-              href="https://www.linkedin.com/in/gonzarascon"
-              target="_blank"
-              rel="noopener noreferrer">
-              Contact me on LinkedIn <SVG src="./icons/linkedin.svg" />
-            </SocialLink>
-          </LinkContainer>
-        </BottomSection>
-      </GridContainer>
+      <Welcome />
     </Wrapper>
   );
 }

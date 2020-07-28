@@ -14,12 +14,13 @@ export const breakpoints = {
 };
 
 export const colors = {
-  blue: Color.rgb(61, 90, 241),
+  blue: Color.rgb(18, 23, 44),
   darkBlue: Color.rgb(14, 21, 58),
   darkBlue: Color.rgb(14, 21, 58),
   lightCyan: Color.rgb(226, 243, 245),
   yellow: Color.rgb(243, 241, 105),
   cyan: Color.rgb(34, 209, 238),
+  gray: Color.rgb(230, 230, 230),
 };
 
 export const Utils = {
