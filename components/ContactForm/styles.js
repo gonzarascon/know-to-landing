@@ -6,14 +6,15 @@ export const FormWrapper = styled.section`
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 25px auto;
+  margin: auto;
   margin-top: 90px;
+  max-width: 1000px;
+  padding: 25px;
 `;
 
 export const FormTitle = styled.h2`
-  font-size: ${calculateRem(40)};
-  color: ${readColor(colors.lightCyan)};
-  text-shadow: 4px 2px 0px #0e153a;
+  font-size: ${calculateRem(30)};
+  color: ${readColor(colors.blue)};
   font-weight: 600;
   margin-bottom: 20px;
 
@@ -28,22 +29,22 @@ export const Form = styled.form`
   justify-content: space-between;
   & > input,
   & > textarea {
-    background-color: ${readColor(colors.blue.darken(0.1).fade(0.5))};
     border: none;
     outline: none;
-    color: white;
+    color: ${readColor(colors.blue)};
     font-size: ${calculateRem(20)};
-    border-bottom: 2px solid white;
-    padding: 15px;
+    padding: 10px 20px;
+    border-radius: 18px;
 
     &::placeholder {
-      color: white;
+      color: ${readColor(colors.blue)};
       font-weight: 300;
     }
   }
 
   & .form-button {
     margin: 20px auto;
+    margin-top: 50px;
   }
 `;
 
@@ -78,6 +79,6 @@ export const FormTextarea = styled.textarea`
 
 export const FormErrorWarning = styled.span`
   text-align: center;
-  color: white;
+  color: ${readColor(colors.blue)};
   font-size: ${calculateRem(20)};
 `;

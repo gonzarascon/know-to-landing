@@ -16,7 +16,6 @@ import {
   FormTextarea,
   FormErrorWarning,
 } from './styles';
-import logEvent from 'helpers/logEvent';
 
 const errorsInitialState = {
   name: false,
@@ -71,10 +70,6 @@ export default function ContactForm() {
           EMAIL_SECRET: process.env.EMAIL_ADRESS,
         })
         .then(() => {
-          logEvent({
-            action: '02_Submit_Contact_Form',
-            label: 'Sent Message from Contact Form',
-          });
           dispatchFormSubmission(setSent());
         })
         .catch(() => dispatchFormSubmission(setError()));
@@ -83,32 +78,27 @@ export default function ContactForm() {
 
   return (
     <FormWrapper>
-      <FormTitle>Contact me!</FormTitle>
+      <FormTitle>¿Tenés algo que enseñar? Contactanos</FormTitle>
       <Form onSubmit={e => handleFormSubmition(e, formData)}>
         <FormInput
-          placeholder="Name"
+          placeholder="Nombre"
           onChange={e => handleChange('name', e.target.value)}
         />
         <FormInput
-          placeholder="Email adress"
+          placeholder="Dirección de E-mail"
           onChange={e => handleChange('email', e.target.value)}
           type="email"
         />
         <FormTextarea
-          placeholder="Your message"
+          placeholder="Contanos sobre tu empresa."
           onChange={e => handleChange('text', e.target.value)}
         />
-        <Button
-          label="Send!"
-          emoji="✔️"
-          className="form-button"
-          type="submit"
-        />
+        <Button label="Enviar" className="form-button" type="submit" />
       </Form>
       {formErrors !== errorsInitialState && (
         <FormErrorWarning>
-          <Emoji symbol="🚨" label="Warning" /> Please check that all inputs are
-          ok!
+          <Emoji symbol="🚨" label="Warning" /> Por favor, corrobora que los
+          datos sean correctos.
         </FormErrorWarning>
       )}
     </FormWrapper>

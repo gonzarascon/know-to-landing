@@ -16,12 +16,13 @@ const ButtonBox = styled(motion.button)`
 
   font-size: ${calculateRem(22)};
 
-  border-radius: 20px;
-  border: none;
+  border-radius: 43px;
+  border: 3px solid #1c48e6;
 
-  background: white;
+  background-color: transparent;
 
-  color: ${readColor(colors.darkBlue)};
+  color: #1c48e6;
+  font-weight: 600;
   transition: all ease 0.3s;
 
   & .emoji {
@@ -31,38 +32,20 @@ const ButtonBox = styled(motion.button)`
   @media (hover: hover) {
     &:hover {
       cursor: pointer;
+      background-color: #1c48e6;
+      color: white;
     }
   }
 
   @media (hover: none) {
-    background-color: white;
-    color: ${readColor(colors.darkBlue)};
+    background-color: #1c48e6;
+    color: white;
   }
 `;
 
 function Button({ label, emoji, ...props }) {
-  const ButtonVariants = {
-    initial: {
-      boxShadow: '0px 0px 0px 0px #0E153A',
-      transition: {
-        duration: 0.1,
-        delay: 0,
-      },
-    },
-    hover: {
-      boxShadow: `9px 10px 0px 0px #0E153A`,
-      transition: {
-        duration: 0.1,
-        delay: 0,
-      },
-    },
-  };
   return (
-    <ButtonBox
-      {...props}
-      variants={ButtonVariants}
-      initial="initial"
-      whileHover="hover">
+    <ButtonBox {...props}>
       {label}
       {emoji && <Emoji symbol={emoji} label="Emoji" />}
     </ButtonBox>

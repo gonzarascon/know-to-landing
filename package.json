@@ -13,6 +13,7 @@
     "debug": "now dev -l 3001 --debug"
   },
   "dependencies": {
+    "@ant-design/icons": "^4.2.1",
     "@sendgrid/mail": "^7.1.0",
     "@zeit/next-css": "^1.0.1",
     "axios": "^0.19.2",

@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import { useAnimation } from 'framer-motion';
-import SVG from 'react-inlinesvg';
 import { Welcome, ContactForm, Emoji, Button, Features } from 'components';
 import {
   useFormSubmissionState,
@@ -27,7 +25,7 @@ function Home() {
       return (
         <FormSectionWrapper>
           <ThankYou>
-            Thanks for contacting me, I will respond you as soon as possible{' '}
+            Gracias por contactarte. ¡Te responderemos lo antes posible!{' '}
             <Emoji symbol="😄" label="Happy" />
           </ThankYou>
         </FormSectionWrapper>
@@ -35,9 +33,9 @@ function Home() {
     } else if (error) {
       return (
         <FormSectionWrapper>
-          <ThankYou>Sorry, something went wrong.</ThankYou>
+          <ThankYou>Ups, algo salio mal...</ThankYou>
           <ErrorSave onClick={() => FormSubmissionDispatch(setWaitingInput())}>
-            Please try again <Emoji symbol="🙏" label="Please" />
+            Por favor, intentalo otra vez. <Emoji symbol="🙏" label="Please" />
           </ErrorSave>
         </FormSectionWrapper>
       );
@@ -48,6 +46,7 @@ function Home() {
     <Wrapper>
       <Welcome />
       <Features />
+      {renderFormSection()}
     </Wrapper>
   );
 }
