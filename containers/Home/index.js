@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useAnimation } from 'framer-motion';
 import SVG from 'react-inlinesvg';
-import { Welcome, ContactForm, Emoji, Button } from 'components';
+import { Welcome, ContactForm, Emoji, Button, Features } from 'components';
 import {
   useFormSubmissionState,
   useFormSubmissionDispatch,
@@ -47,6 +47,7 @@ function Home() {
   return (
     <Wrapper>
       <Welcome />
+      <Features />
     </Wrapper>
   );
 }
