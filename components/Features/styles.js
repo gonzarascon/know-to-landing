@@ -7,6 +7,9 @@ const { readColor, calculateRem } = Utils;
 export const FeaturesContainer = styled.section`
   padding: 25px;
   padding-top: 50px;
+  @media ${breakpoints.mediumDevice} {
+    margin-top: 75px;
+  }
 `;
 
 export const FeaturesTitle = styled.h3`
@@ -35,6 +38,10 @@ export const FeaturesGrid = styled.ul`
   margin: 0 auto;
   @media ${breakpoints.mediumDevice} {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  @media ${breakpoints.largeDevice} {
+    max-width: 1400px;
   }
 `;
 

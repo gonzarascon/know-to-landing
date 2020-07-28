@@ -63,6 +63,7 @@ export const FormSectionWrapper = styled.section`
   flex-wrap: wrap;
   width: 100%;
   margin: 25px auto;
+  margin-bottom: 0;
 
   @media ${breakpoints.mediumDevice} {
     height: 525px;

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Welcome, ContactForm, Emoji, Button, Features } from 'components';
+import SVG from 'react-inlinesvg';
 import {
   useFormSubmissionState,
   useFormSubmissionDispatch,
