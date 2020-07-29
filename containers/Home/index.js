@@ -7,7 +7,13 @@ import {
   setWaitingInput,
 } from 'components/FormSubmissionContext';
 
-import { Wrapper, ThankYou, FormSectionWrapper, ErrorSave } from './styles';
+import {
+  Wrapper,
+  ThankYou,
+  FormSectionWrapper,
+  ErrorSave,
+  BottomSection,
+} from './styles';
 
 function Home() {
   const { sending, sent, error, waitingInput } = useFormSubmissionState();
@@ -49,6 +55,14 @@ function Home() {
       <Welcome />
       <Features />
       {renderFormSection()}
+      <BottomSection>
+        <a
+          href="https://gonzarascon.com"
+          target="_blank"
+          rel="noopener noreferrer">
+          Desarrollado por Gonzalo Rascón
+        </a>
+      </BottomSection>
     </Wrapper>
   );
 }

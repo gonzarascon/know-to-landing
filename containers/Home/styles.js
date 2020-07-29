@@ -96,11 +96,20 @@ export const ErrorSave = styled.span`
 export const BottomSection = styled.footer`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  grid-row: 3/4;
-  @media ${breakpoints.mediumDevice} {
-    grid-column: 3/11;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  color: ${readColor(colors.blue)};
+  padding: 20px;
+  height: 80px;
+
+  a {
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.75;
+        transition: opacity ease 0.1s;
+      }
+    }
   }
 `;
 
