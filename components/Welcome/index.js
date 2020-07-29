@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import SVG from 'react-inlinesvg';
 
+import Typed from 'react-typed';
+
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
 
@@ -35,7 +37,16 @@ export default function Welcome() {
                             <SVG src="/icons/logo_outline.svg" />
                           </Logo>
                           <SceneTitle>
-                            ¡La solución para las capacitaciones en tu empresa!
+                            ¡La solución para las capacitaciones en tu{' '}
+                            <Typed
+                              strings={['empresa', 'agencia', 'estudio']}
+                              typeSpeed={30}
+                              backSpeed={35}
+                              backDelay={1500}
+                              loop
+                              showCursor={false}
+                            />
+                            !
                           </SceneTitle>
                         </SceneContainer>
                       </>
