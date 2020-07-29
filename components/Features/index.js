@@ -55,12 +55,12 @@ function Features() {
       id: 4,
       icon: <ApiFilled />,
       title: `Acceso a API del curso`,
-      description: `Puedes recuperar los datos de tu curso a traves de la API integrada y utilizarlos donde quieras.`,
+      description: `Podes recuperar los datos de tu curso a traves de la API integrada y utilizarlos donde quieras.`,
     },
   ];
 
   return (
-    <FeaturesContainer>
+    <FeaturesContainer id="features">
       <FeaturesTitle>Características principales</FeaturesTitle>
       <FeaturesGrid>
         {FeatureData.map(f => (

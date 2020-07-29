@@ -77,7 +77,7 @@ export default function ContactForm() {
   }
 
   return (
-    <FormWrapper>
+    <FormWrapper id="contacto">
       <FormTitle>¿Tenés algo que enseñar? Contactanos</FormTitle>
       <Form onSubmit={e => handleFormSubmition(e, formData)}>
         <FormInput

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Welcome, ContactForm, Emoji, Button, Features } from 'components';
+import { Welcome, ContactForm, Emoji, Header, Features } from 'components';
 import SVG from 'react-inlinesvg';
 import {
   useFormSubmissionState,
@@ -18,13 +18,13 @@ function Home() {
       return <ContactForm />;
     } else if (sending) {
       return (
-        <FormSectionWrapper>
+        <FormSectionWrapper id="contacto">
           <SVG src="./icons/loading-transparent.svg" />
         </FormSectionWrapper>
       );
     } else if (sent) {
       return (
-        <FormSectionWrapper>
+        <FormSectionWrapper id="contacto">
           <ThankYou>
             Gracias por contactarte. ¡Te responderemos lo antes posible!{' '}
             <Emoji symbol="😄" label="Happy" />
@@ -33,7 +33,7 @@ function Home() {
       );
     } else if (error) {
       return (
-        <FormSectionWrapper>
+        <FormSectionWrapper id="contacto">
           <ThankYou>Ups, algo salio mal...</ThankYou>
           <ErrorSave onClick={() => FormSubmissionDispatch(setWaitingInput())}>
             Por favor, intentalo otra vez. <Emoji symbol="🙏" label="Please" />
@@ -45,6 +45,7 @@ function Home() {
 
   return (
     <Wrapper>
+      <Header />
       <Welcome />
       <Features />
       {renderFormSection()}
