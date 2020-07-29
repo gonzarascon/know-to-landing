@@ -14,12 +14,14 @@ export const FormWrapper = styled.section`
 
 export const FormTitle = styled.h2`
   font-size: ${calculateRem(30)};
+  line-height: ${calculateRem(35)};
   color: ${readColor(colors.blue)};
   font-weight: 600;
   margin-bottom: 20px;
 
   @media ${breakpoints.mediumDevice} {
     font-size: ${calculateRem(50)};
+    line-height: ${calculateRem(60)};
   }
 `;
 
@@ -52,6 +54,7 @@ export const FormInput = styled.input`
   width: 100%;
   margin: 20px 0;
   height: 50px;
+  font-family: 'Work Sans', sans-serif;
 
   @media ${breakpoints.mediumDevice} {
     width: 45%;

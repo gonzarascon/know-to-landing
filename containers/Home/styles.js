@@ -97,7 +97,7 @@ export const BottomSection = styled.footer`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
   color: ${readColor(colors.blue)};
   padding: 20px;

@@ -51,7 +51,7 @@ export const Feature = styled.li`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  box-shadow: 0px 0px 40px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px -7px rgba(0, 0, 0, 0.75);
   border-radius: 18px;
   min-height: 228px;
 
@@ -81,4 +81,5 @@ export const FeatureTitle = styled.h4`
 
 export const FeatureDescription = styled.p`
   font-size: ${calculateRem(16)};
+  line-height: ${calculateRem(20)};
 `;

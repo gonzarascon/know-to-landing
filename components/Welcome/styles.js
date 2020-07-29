@@ -120,7 +120,7 @@ export const GridText = styled.p`
     Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
   font-size: ${calculateRem(20)};
-
+  line-height: ${calculateRem(27)};
   @media ${breakpoints.largeDevice} {
     font-size: ${calculateRem(25)};
   }

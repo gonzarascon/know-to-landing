@@ -22,7 +22,7 @@ export default function Welcome() {
     <>
       <span id="welcome" />
       <Controller>
-        <Scene triggerHook="onLeave" duration={3000} pin>
+        <Scene triggerHook="onLeave" duration={2000} pin>
           {progress => (
             <Wrapper>
               <TimelineWrapper>
