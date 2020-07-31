@@ -8,6 +8,15 @@ const AnimateGradient = keyframes`
     100%{background-position:39% 0%}
 `;
 
+const UpAndDown = keyframes`
+  0%{
+    transform: translateY(-10px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+`;
+
 export const Welcome = styled.div`
   width: 100%;
   height: 100vh;
@@ -75,6 +84,42 @@ export const SceneTitle = styled.h2`
   font-size: ${calculateRem(30)};
   margin-top: 20px;
   color: white;
+`;
+
+export const ScrollArrow = styled.div`
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  bottom: 20px;
+
+  @supports (-webkit-touch-callout: none) {
+    bottom: 80px;
+  }
+
+  max-width: 300px;
+  align-items: center;
+
+  animation: ${UpAndDown} 0.75s 1s alternate infinite;
+
+  .label {
+    font-size: ${calculateRem(18)};
+    margin-bottom: 10px;
+  }
+
+  .anticon {
+    font-size: ${calculateRem(20)};
+  }
+
+  svg {
+    fill: white;
+  }
 `;
 
 export const Logo = styled.div`

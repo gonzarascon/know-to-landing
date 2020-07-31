@@ -3,6 +3,8 @@ import SVG from 'react-inlinesvg';
 
 import Typed from 'react-typed';
 
+import { ArrowDownOutlined } from '@ant-design/icons';
+
 import { Controller, Scene } from 'react-scrollmagic';
 import { Tween, Timeline } from 'react-gsap';
 
@@ -17,6 +19,7 @@ import {
   GridDescription,
   GridTitle,
   GridText,
+  ScrollArrow,
 } from './styles';
 
 export default function Welcome() {
@@ -48,6 +51,10 @@ export default function Welcome() {
                             />
                             !
                           </SceneTitle>
+                          <ScrollArrow>
+                            <span className="label">Descubre más</span>
+                            <ArrowDownOutlined />
+                          </ScrollArrow>
                         </SceneContainer>
                       </>
                     }>
